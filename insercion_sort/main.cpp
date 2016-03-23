@@ -1,15 +1,29 @@
-//
-//  main.cpp
-//  insercion_sort
-//
-//  Created by jesus erick vera callme on 23/03/16.
-//  Copyright © 2016 jesus erick vera callme. All rights reserved.
-//
-
 #include <iostream>
+#include <vector>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+using namespace std;
+
+void insercion(vector<int>a);
+
+int main()  {
+    vector<int>vec;
+    vec.push_back(1101);    vec.push_back(1);
+    vec.push_back(889333);  vec.push_back(8);
+    vec.push_back(3);       vec.push_back(1282922);
+    insercion(vec);
+}
+
+void insercion(vector<int>a)        {
+    int key,i;
+    for(int j=1; j<a.size(); j++)   {
+        key = a[j];
+        i = j-1;
+        while(i>=0 and a[i]>key)    {
+            a[i+1] = a[i];
+            i = i-1;
+        }
+        a[i+1]=key;
+    }
+    
+    for(int i=0;i<a.size();i++) cout<<a[i]<<endl;
 }
