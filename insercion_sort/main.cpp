@@ -10,6 +10,9 @@ int main()  {
     vec.push_back(1101);    vec.push_back(1);
     vec.push_back(889333);  vec.push_back(8);
     vec.push_back(3);       vec.push_back(1282922);
+    
+    for(int i=0;i<vec.size();i++) cout<<vec[i]<<"  ";
+    cout<<endl;
     insercion(vec);
 }
 
@@ -25,5 +28,6 @@ void insercion(vector<int>a)        {
         a[i+1]=key;
     }
     
-    for(int i=0;i<a.size();i++) cout<<a[i]<<endl;
+    for(int i=0;i<a.size();i++) cout<<a[i]<<"  ";
+    cout<<endl;
 }
